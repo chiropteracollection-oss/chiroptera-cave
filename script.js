@@ -1,3 +1,7 @@
-document.getElementById("enterBtn").addEventListener("click", () => {
-    alert("Coming soon: Connect Wallet");
-});
+const btn = document.getElementById("enterBtn");
+
+btn.onclick = () => {
+
+    alert("Connect Wallet will be added in the next step.");
+
+};
