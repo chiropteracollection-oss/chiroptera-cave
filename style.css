@@ -1,45 +1,65 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: url("assets/background.jpg") center center/cover no-repeat;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Georgia, serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.overlay {
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.35);
-    padding: 30px;
-    border-radius: 15px;
+body{
+
+    background-image:url("assets/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:Georgia, serif;
 }
 
-h1 {
-    font-size: 64px;
-    margin-bottom: 10px;
+.overlay{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:110px;
+
 }
 
-p {
-    font-size: 24px;
-    margin-bottom: 30px;
+#enterBtn{
+
+    background:rgba(0,0,0,.45);
+
+    color:#e8d2a3;
+
+    border:2px solid #caa76b;
+
+    padding:20px 70px;
+
+    font-size:32px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
-#enterBtn {
-    padding: 18px 50px;
-    font-size: 22px;
-    background: transparent;
-    color: white;
-    border: 2px solid #d8c28f;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+#enterBtn:hover{
 
-#enterBtn:hover {
-    background: rgba(216,194,143,0.25);
-    transform: scale(1.05);
+    transform:scale(1.05);
+
+    background:#caa76b;
+
+    color:black;
+
 }
