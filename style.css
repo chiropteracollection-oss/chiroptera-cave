@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 60px;
+    letter-spacing: 6px;
+}
+
+.overlay p {
+    font-size: 22px;
+    color: #bbbbbb;
+}
+
+#enterBtn {
+    margin-top: 25px;
+    padding: 15px 40px;
+    font-size: 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#enterBtn:hover {
+    background: white;
+    color: black;
+}
