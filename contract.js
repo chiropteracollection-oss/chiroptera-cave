@@ -7,10 +7,30 @@ const ABI = [
 async function checkNFT() {
 
     if (!window.ethereum) {
-        alert("Please install MetaMask.");
-        return;
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+
+        const open = confirm(
+            "🦇 To enter the Chiroptera Cave on mobile, please open this website in the MetaMask Browser.\n\nPress OK to open MetaMask."
+        );
+
+        if (open) {
+            window.location.href =
+            "https://metamask.app.link/dapp/chiroptera-cave.chiroptera-collection.workers.dev";
+        }
+
+    } else {
+
+        alert(
+            "🦇 MetaMask is required.\n\nPlease install MetaMask to enter the Chiroptera Cave."
+        );
+
     }
 
+    return;
+}
     try {
 
         const provider = new ethers.providers.Web3Provider(window.ethereum);
