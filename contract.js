@@ -7,7 +7,7 @@ const ABI = [
 async function checkNFT() {
 
     if (!window.ethereum) {
-        window.location.href = "denied.html";
+        alert("Please install MetaMask.");
         return;
     }
 
@@ -30,25 +30,14 @@ async function checkNFT() {
         const balance = await contract.balanceOf(wallet);
 
         if (balance.gt(0)) {
-
-            document.body.classList.add("open");
-
-            setTimeout(() => {
-                window.location.href = "members.html";
-            }, 2000);
-
+            window.location.href = "members.html";
         } else {
-
             window.location.href = "denied.html";
-
         }
 
     } catch (e) {
-
         console.error(e);
-        alert(error.message);
-console.error(error);
-
+        alert(e.message);
     }
 
 }
