@@ -1,35 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chiroptera Rewards</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url("assets/background.jpg");
+background-size:cover;
+background-position:center;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#f5e8c8;
+padding:30px;
+}
+
+.card{
+width:900px;
+max-width:95%;
+background:rgba(15,15,20,.65);
+backdrop-filter:blur(8px);
+border:2px solid #c89a49;
+border-radius:25px;
+padding:35px;
+box-shadow:0 0 30px rgba(200,154,73,.25);
+}
+
+h1{
+text-align:center;
+font-size:50px;
+color:#e8d2a2;
+margin-bottom:35px;
+}
+
+.reward{
+border:2px solid #c89a49;
+border-radius:15px;
+padding:20px;
+margin-bottom:20px;
+transition:.3s;
+}
+
+.reward:hover{
+transform:translateY(-4px);
+box-shadow:0 0 20px rgba(200,154,73,.4);
+}
+
+.reward h2{
+color:#f0d18c;
+margin-bottom:10px;
+font-size:28px;
+}
+
+.reward p{
+font-size:18px;
+line-height:1.8;
+color:#f2e7cb;
+}
+
+.note{
+margin-top:25px;
+text-align:center;
+font-style:italic;
+font-size:18px;
+color:#c89a49;
+}
+
+.back{
+margin-top:35px;
+text-align:center;
+}
+
+.back button{
+padding:15px 45px;
+font-size:20px;
+font-weight:bold;
+background:#e6c97d;
+color:#111;
+border:none;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+
+.back button:hover{
+transform:scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
 <h1>🎁 Chiroptera Rewards</h1>
 
-<div class="box">
-🎁 <strong>Claim Rewards</strong><br>
-Claimable rewards will be available after the launch of <strong>$CHIRO</strong>.
+<div class="reward">
+<h2>🎁 Claim Rewards</h2>
+<p>
+Claimable rewards will become available after the official launch of
+<strong>$CHIRO</strong>.
+</p>
 </div>
 
-<div class="box">
-🏆 <strong>Active Giveaways</strong><br>
-Community giveaways are currently live.<br>
-Join our official Discord and follow us on X to participate.
+<div class="reward">
+<h2>🎉 Active Giveaways</h2>
+<p>
+Community giveaways are currently live.<br><br>
+
+✔ Join our Discord community.<br>
+✔ Follow Chiroptera on X.<br>
+✔ Participate in events to increase your chances of winning exclusive prizes.
+</p>
 </div>
 
-<div class="box">
-🪂 <strong>Future Airdrops</strong><br>
-Exclusive airdrops for eligible NFT holders after the launch of <strong>$CHIRO</strong>.
+<div class="reward">
+<h2>💰 Future Airdrops</h2>
+<p>
+Genesis NFT holders will receive exclusive airdrops after the official
+launch of <strong>$CHIRO</strong>.
+</p>
 </div>
 
-<div class="box">
-⭐ <strong>Holder Benefits</strong><br>
-Exclusive benefits and early access for Chiroptera Genesis NFT holders.
+<div class="reward">
+<h2>⭐ Holder Benefits</h2>
+<p>
+• Exclusive community access.<br>
+• Priority giveaways.<br>
+• Early project updates.<br>
+• Future whitelist opportunities.<br>
+• Premium holder rewards.
+</p>
 </div>
 
-<div class="box">
-📅 <strong>Community Events</strong><br>
-Special events, competitions and community activities for our community.
+<div class="reward">
+<h2>📅 Community Events</h2>
+<p>
+Weekly events, competitions, Discord activities,
+and X campaigns will keep the Chiroptera community active and rewarded.
+</p>
 </div>
 
-<p class="notice">
-Stay active in the Chiroptera community to maximize your future rewards.
+<p class="note">
+🦇 Stay active in the Chiroptera community to maximize your future rewards.
 </p>
 
-<button class="back-btn" onclick="location.href='members.html'">
+<div class="back">
+<button onclick="location.href='members.html'">
 ← Back to Members
 </button>
+</div>
+
+</div>
+
+</body>
+</html>
