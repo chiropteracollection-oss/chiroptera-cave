@@ -111,7 +111,45 @@ color:black;
 transform:scale(1.05);
 
 }
+.member-panel{
 
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+
+margin:30px 0;
+
+}
+
+.member-item{
+
+padding:18px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid #c89a49;
+
+border-radius:12px;
+
+text-align:center;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.member-item:hover{
+
+background:#c89a49;
+
+color:#000;
+
+transform:translateY(-4px);
+
+box-shadow:0 0 20px rgba(200,154,73,.4);
+
+}
 </style>
 
 </head>
@@ -121,7 +159,24 @@ transform:scale(1.05);
 <div class="card">
 
 <h1>CHIROPTERA MEMBERS</h1>
+<div class="member-panel">
 
+<div class="member-item">
+🦇 <strong>Membership</strong><br>
+Genesis Holder
+</div>
+
+<div class="member-item">
+🏅 <strong>Rank</strong><br>
+Founder
+</div>
+
+<div class="member-item">
+🔐 <strong>Access</strong><br>
+Verified NFT Holder
+</div>
+
+</div>
 <div id="wallet">
 
 Checking wallet...
