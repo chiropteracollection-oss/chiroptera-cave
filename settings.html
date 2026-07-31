@@ -3,96 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Chiroptera Settings</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
-
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Georgia,serif;
+}
+
+body{
 background:
 linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
 url("assets/background.jpg");
 background-size:cover;
 background-position:center;
-color:#e8d2a3;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
+color:#f5e7c2;
 }
 
 .card{
-width:900px;
-max-width:90%;
-background:rgba(0,0,0,.60);
+width:850px;
+max-width:92%;
+background:rgba(20,20,25,.75);
 border:2px solid #c89a49;
 border-radius:18px;
 padding:40px;
+box-shadow:0 0 30px rgba(200,154,73,.3);
+}
+
+h1{
+text-align:center;
+font-size:52px;
+margin-bottom:35px;
+color:#c89a49;
 }
 
 .info{
-margin:20px 0;
+border:2px solid #c89a49;
+border-radius:12px;
 padding:18px;
-border:1px solid #c89a49;
-border-radius:10px;
-font-size:20px;
+margin-bottom:18px;
+font-size:22px;
+background:rgba(255,255,255,.03);
+}
+
+.info strong{
+display:block;
+margin-bottom:8px;
+color:#c89a49;
+}
+
+.status{
+color:#63ff8b;
+font-weight:bold;
+}
+
+.version{
+text-align:center;
+margin-top:25px;
+color:#c89a49;
+font-style:italic;
+font-size:18px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:35px;
+flex-wrap:wrap;
 }
 
 button{
-margin-top:20px;
 padding:15px 35px;
-background:#c89a49;
-border:none;
-border-radius:10px;
 font-size:18px;
 font-weight:bold;
+border:none;
+border-radius:10px;
+background:#c89a49;
+color:#111;
 cursor:pointer;
+transition:.3s;
 }
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(200,154,73,.6);
+}
+
 </style>
 
 </head>
+
 <body>
 
 <div class="card">
 
 <h1>⚙ Settings</h1>
 
-<div class="info" id="wallet">
-Wallet: Loading...
+<div class="info">
+<strong>Wallet</strong>
+<span id="wallet">0x8513...EFBc</span>
 </div>
 
 <div class="info">
-Network: Ethereum Mainnet
+<strong>Network</strong>
+Ethereum Mainnet
 </div>
 
 <div class="info">
-Contract:
-0xe55d8a7f9aaed7919e6a6726a8707f2252844984
+<strong>Contract</strong>
+0xe55d8...4984
 </div>
 
-<button onclick="disconnect()">
+<div class="info">
+<strong>Status</strong>
+<span class="status">🟢 Verified NFT Holder</span>
+</div>
+
+<div class="version">
+Chiroptera Cave v1.0
+</div>
+
+<div class="buttons">
+
+<button onclick="disconnectWallet()">
 Disconnect Wallet
 </button>
 
-<button onclick="history.back()">
-⬅ Back to Members
+<button onclick="location.href='members.html'">
+← Back to Members
 </button>
+
+</div>
 
 </div>
 
 <script>
-const wallet = localStorage.getItem("wallet");
+function disconnectWallet(){
 
-if(wallet){
-document.getElementById("wallet").innerHTML =
-"Wallet: " + wallet;
-}
+alert("Wallet disconnected.");
 
-function disconnect(){
-localStorage.removeItem("wallet");
 window.location.href="index.html";
+
 }
 </script>
 
