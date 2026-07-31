@@ -38,6 +38,21 @@ border:1px solid #c89a49;
 border-radius:10px;
 font-size:22px;
 }
+  .back-btn{
+margin-top:30px;
+padding:15px 40px;
+background:#c89a49;
+border:none;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.back-btn:hover{
+transform:scale(1.05);
+}
 </style>
 
 </head>
@@ -65,8 +80,8 @@ Community Events
 
 <br>
 
-<button onclick="history.back()">
-⬅ Back
+<button class="back-btn" onclick="history.back()">
+⬅ Back to Members
 </button>
 
 </div>
