@@ -1,26 +1,116 @@
-<h1>🏛️ DAO</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chiroptera DAO</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Georgia,serif;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url("assets/background.jpg");
+    background-size:cover;
+    background-position:center;
+    color:#f5e7c2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:800px;
+    max-width:90%;
+    padding:40px;
+    border:2px solid #c89a49;
+    border-radius:18px;
+    background:rgba(15,15,20,.65);
+    backdrop-filter:blur(8px);
+    text-align:center;
+    box-shadow:0 0 35px rgba(200,154,73,.25);
+}
+
+h1{
+    color:#c89a49;
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+h2{
+    color:#ffffff;
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+p{
+    font-size:22px;
+    line-height:1.8;
+    margin:18px 0;
+}
+
+.highlight{
+    color:#c89a49;
+    font-weight:bold;
+}
+
+.back-btn{
+    margin-top:40px;
+    padding:16px 45px;
+    background:#c89a49;
+    color:#111;
+    border:none;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(200,154,73,.5);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>DAO</h1>
 
 <h2>Coming Soon</h2>
 
 <p>
 The Chiroptera DAO will become available after the official launch of
-<strong>$CHIRO</strong>.
+<span class="highlight">$CHIRO</span>.
 </p>
 
 <p>
-Token holders will be able to participate in governance, submit proposals,
-and vote on the future of the Chiroptera ecosystem.
+Token holders will be able to participate in governance,
+submit proposals, and vote on the future of the Chiroptera ecosystem.
 </p>
 
 <p>
-The community will help shape rewards, treasury decisions, partnerships,
-and future development.
+The community will help shape rewards, treasury decisions,
+partnerships, and future development.
 </p>
 
-<p style="color:#c89a49;">
+<p class="highlight">
 Stay tuned for the next chapter of decentralized governance.
 </p>
 
-<button onclick="location.href='members.html'" class="back-btn">
+<button class="back-btn" onclick="location.href='members.html'">
 ← Back to Members
 </button>
+
+</div>
+
+</body>
+</html>
