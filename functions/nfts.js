@@ -1,8 +1,5 @@
-
 export async function onRequestGet(context) {
-  const wallet = context.request.url
-    ? new URL(context.request.url).searchParams.get("wallet")
-    : null;
+  const wallet = new URL(context.request.url).searchParams.get("wallet");
 
   if (!wallet) {
     return new Response(
@@ -18,14 +15,9 @@ export async function onRequestGet(context) {
   }
 
   const apiKey = context.env.OPENSEA_API_KEY;
-
-  const contract =
-    "0xe55d8a7f9aaed7919e6a6726a8707f2252844984";
-
   const collectionSlug = "chiroptera-collection";
 
-const url =
-`https://api.opensea.io/api/v2/chain/ethereum/account/${wallet}/nfts?collection=${collectionSlug}`;
+  const url = https://api.opensea.io/api/v2/chain/ethereum/account/${wallet}/nfts?collection=${collectionSlug};
 
   const response = await fetch(url, {
     headers: {
