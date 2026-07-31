@@ -22,7 +22,10 @@ export async function onRequestGet(context) {
   const contract =
     "0xe55d8a7f9aaed7919e6a6726a8707f2252844984";
 
-  const url = `https://api.opensea.io/api/v2/chain/ethereum/account/${wallet}/nfts?collection=${contract}`;
+  const collectionSlug = "chiroptera-collection";
+
+const url =
+`https://api.opensea.io/api/v2/chain/ethereum/account/${wallet}/nfts?collection=${collectionSlug}`;
 
   const response = await fetch(url, {
     headers: {
