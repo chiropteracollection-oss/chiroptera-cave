@@ -30,9 +30,20 @@ async function checkNFT() {
         const balance = await contract.balanceOf(wallet);
 
         if (balance.gt(0)) {
-            window.location.href = "members.html";
-        } else {
-            window.location.href = "denied.html";
+
+    document.body.classList.add("open");
+
+    setTimeout(() => {
+
+        window.location.href = "members.html";
+
+    }, 1800);
+
+} else {
+
+    window.location.href = "denied.html";
+
+}
         }
 
     } catch (e) {
