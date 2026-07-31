@@ -177,13 +177,13 @@ return;
 
 data.nfts.forEach(nft=>{
 
-gallery.innerHTML+=
+gallery.innerHTML += `
 <div class="nft-card">
-<img src="${nft.image_url}">
-<h3>${nft.name}</h3>
-<p>#${nft.identifier}</p>
+    <img src="${nft.image_url}">
+    <h3>${nft.name}</h3>
+    <p>#${nft.identifier}</p>
 </div>
-;
+`;
 
 });
 
