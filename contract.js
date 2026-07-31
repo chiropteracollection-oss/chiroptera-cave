@@ -31,24 +31,23 @@ async function checkNFT() {
 
         if (balance.gt(0)) {
 
-    document.body.classList.add("open");
+            document.body.classList.add("open");
 
-    setTimeout(() => {
+            setTimeout(() => {
+                window.location.href = "members.html";
+            }, 1800);
 
-        window.location.href = "members.html";
+        } else {
 
-    }, 1800);
+            window.location.href = "denied.html";
 
-} else {
-
-    window.location.href = "denied.html";
-
-}
         }
 
     } catch (e) {
+
         console.error(e);
         alert(e.message);
+
     }
 
 }
