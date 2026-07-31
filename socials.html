@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiroptera Socials</title>
+
+<style>
+body{
+margin:0;
+font-family:Georgia,serif;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url("assets/background.jpg");
+background-size:cover;
+background-position:center;
+color:#e8d2a3;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.card{
+width:850px;
+max-width:90%;
+background:rgba(0,0,0,.60);
+border:2px solid #c89a49;
+border-radius:18px;
+padding:40px;
+text-align:center;
+}
+
+.button{
+margin:20px 0;
+padding:20px;
+border:2px solid #c89a49;
+border-radius:12px;
+font-size:24px;
+cursor:pointer;
+transition:.3s;
+}
+
+.button:hover{
+background:#c89a49;
+color:#000;
+transform:scale(1.03);
+}
+
+.back-btn{
+margin-top:30px;
+padding:15px 35px;
+background:#c89a49;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌐 Socials</h1>
+
+<div class="button"
+onclick="window.open('https://x.com/ChiropteraNFT','_blank')">
+𝕏 Follow on X
+</div>
+
+<div class="button"
+onclick="window.open('https://discord.gg/YOUR_INVITE','_blank')">
+💬 Join Discord
+</div>
+
+<button class="back-btn"
+onclick="history.back()">
+⬅ Back to Members
+</button>
+
+</div>
+
+</body>
+</html>
