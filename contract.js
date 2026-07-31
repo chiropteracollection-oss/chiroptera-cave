@@ -46,7 +46,8 @@ async function checkNFT() {
     } catch (e) {
 
         console.error(e);
-        alert("Verification failed.");
+        alert(error.message);
+console.error(error);
 
     }
 
