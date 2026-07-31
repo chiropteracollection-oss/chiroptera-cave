@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiroptera Settings</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+
+<style>
+body{
+margin:0;
+font-family:Georgia,serif;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url("assets/background.jpg");
+background-size:cover;
+background-position:center;
+color:#e8d2a3;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.card{
+width:900px;
+max-width:90%;
+background:rgba(0,0,0,.60);
+border:2px solid #c89a49;
+border-radius:18px;
+padding:40px;
+}
+
+.info{
+margin:20px 0;
+padding:18px;
+border:1px solid #c89a49;
+border-radius:10px;
+font-size:20px;
+}
+
+button{
+margin-top:20px;
+padding:15px 35px;
+background:#c89a49;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<h1>⚙ Settings</h1>
+
+<div class="info" id="wallet">
+Wallet: Loading...
+</div>
+
+<div class="info">
+Network: Ethereum Mainnet
+</div>
+
+<div class="info">
+Contract:
+0xe55d8a7f9aaed7919e6a6726a8707f2252844984
+</div>
+
+<button onclick="disconnect()">
+Disconnect Wallet
+</button>
+
+<button onclick="history.back()">
+⬅ Back to Members
+</button>
+
+</div>
+
+<script>
+const wallet = localStorage.getItem("wallet");
+
+if(wallet){
+document.getElementById("wallet").innerHTML =
+"Wallet: " + wallet;
+}
+
+function disconnect(){
+localStorage.removeItem("wallet");
+window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
