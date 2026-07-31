@@ -85,3 +85,28 @@ transform:scale(.8);
 opacity:0;
 
 }
+.intro{
+    margin-top:20px;
+    text-align:center;
+    color:#e8d2a2;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.opensea-btn{
+    margin-top:20px;
+    padding:12px 35px;
+    background:transparent;
+    border:2px solid #c89a49;
+    color:#e8d2a2;
+    font-size:18px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.opensea-btn:hover{
+    background:#c89a49;
+    color:#111;
+    box-shadow:0 0 20px rgba(200,154,73,.5);
+}
