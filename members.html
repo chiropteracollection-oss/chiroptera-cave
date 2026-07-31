@@ -145,11 +145,49 @@ Checking wallet...
 </div>
 
 </div>
+<hr style="margin:40px 0;border:1px solid #444;">
 
+<h2 style="text-align:center;margin-bottom:20px;">
+Your Chiroptera NFTs
+</h2>
+
+<div id="gallery" class="gallery">
+Loading NFTs...
+</div>
 <script>
 
 const CONTRACT="0xe55d8a7f9aaed7919e6a6726a8707f2252844984";
+async function loadNFTs(wallet){
 
+const res=await fetch("/nfts?wallet="+wallet);
+
+const data=await res.json();
+
+const gallery=document.getElementById("gallery");
+
+gallery.innerHTML="";
+
+if(!data.nfts || data.nfts.length===0){
+
+gallery.innerHTML="<h3>No NFTs Found</h3>";
+
+return;
+
+}
+
+data.nfts.forEach(nft=>{
+
+gallery.innerHTML+=
+<div class="nft-card">
+<img src="${nft.image_url}">
+<h3>${nft.name}</h3>
+<p>#${nft.identifier}</p>
+</div>
+;
+
+});
+
+}
 const ABI=[
 "function balanceOf(address owner)view returns(uint256)"
 ];
@@ -177,7 +215,7 @@ return;
 }
 
 const wallet=accounts[0];
-
+loadNFTs(wallet);
 document.getElementById("wallet").innerHTML=
 
 "Wallet: "+wallet.substring(0,6)+"..."+wallet.slice(-4);
